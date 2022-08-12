@@ -8,12 +8,12 @@ text = "믕"
 
 # opening the mask image. Find an image you would like to us and insert it here.
 # I used a 1080 by 1080 heart image. Image needs to have a background.
-heart_mask = np.array(Image.open("[Insert PNG/JPEG Image name here without the brackets]"))
+mask = np.array(Image.open("[Insert PNG/JPEG Image name here without the brackets]"))
 
 # word cloud appearance and generation
 wc = WordCloud(background_color="white",
                 repeat=True,
-                mask=heart_mask,
+                mask=mask,
                 font_path="NotoSansKR-Medium.otf",
                 contour_width=3,
                 contour_color="black",
@@ -22,7 +22,7 @@ wc = WordCloud(background_color="white",
 wc.generate(text)
 
 # create the image colors from the colors in the mask
-image_colors = ImageColorGenerator(heart_mask)
+image_colors = ImageColorGenerator(mask)
 
 # to display the wordcloud
 plt.axis("off")
