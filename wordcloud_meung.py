@@ -6,7 +6,7 @@ from wordcloud import WordCloud, ImageColorGenerator
 # The text you would like to use in the wordcloud. In this example it is the simplest form - one word
 text = "믕"
 
-# opening the mask image. Find an image you would like to us and insert it here.
+# opening the mask image. Find an image you would like to use and insert it here.
 # I used a 1080 by 1080 heart image. Image needs to have a background.
 mask = np.array(Image.open("[Insert PNG/JPEG Image name here without the brackets]"))
 
